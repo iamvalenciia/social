@@ -1,6 +1,6 @@
 
 
-export const FooterWaves = () => {
+export const FooterWaves = (): JSX.Element => {
     
     return(
         <div className="lg:col-start-1 lg:col-end-3 row-start-3 row-end-4 pt-4">

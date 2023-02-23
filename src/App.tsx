@@ -5,8 +5,7 @@ import { Main } from "./pages/main";
 import { Login } from "./pages/login";
 import {Navbar} from "./components/navbar"
 
-function App() {
-
+function App(): JSX.Element {
 
   return (
     <div className="App">

@@ -1,16 +1,23 @@
 import { auth, provider } from "../config/firebase";
-import { signInWithPopup } from "firebase/auth";
+import { UserCredential, signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import {FooterWaves} from "../components/waves-footer";
+import { FirebaseError } from "firebase/app";
 
-export const Login = () => {
+export const Login = (): JSX.Element => {
     const navigate = useNavigate();
 
-    const signInWithGoogle = async () => {
-        const result = await signInWithPopup( auth, provider );
-        console.log(result);
-        // This go you directly to the home page
-        navigate("/");
+    const signInWithGoogle = async (): Promise<void> => {
+
+        try {
+            const result: UserCredential = await signInWithPopup( auth, provider );
+            console.log(result);
+            // This go you directly to the home page
+            navigate("/");
+        } catch (error: FirebaseError | unknown) {
+            console.error(error);
+        }
+    
     };
 
     return (

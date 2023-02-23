@@ -2,10 +2,11 @@ import { Link } from "react-router-dom";
 import { auth } from "../config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
+import { User } from "firebase/auth";
 
-export const Main = () => {
+export const Main: React.FC = () => {
 
-    const [user] = useAuthState(auth);
+    const user: User | null | undefined = useAuthState(auth)[0];
 
     const signUserOut = async () => {
         await signOut(auth);
