@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Social Media - LightLines
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](https://user-images.githubusercontent.com/113379725/221112689-3be9a7da-060d-40df-a839-db51e08bf063.png)
 
 ## Available Scripts
 
