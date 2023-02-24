@@ -12,5 +12,5 @@ TypeScript, React.js, Vite, Tailwind CSS, Firebase
 
 ### `npm start`
 
-Runs the app in the development mode adding /login or\
-Open [http://localhost:3000/login](http://localhost:3000/login) to view it in the browser.
+Runs the app in the development mode.\
+Add /login or open [http://localhost:3000/login](http://localhost:3000/login) to view it in the browser.
