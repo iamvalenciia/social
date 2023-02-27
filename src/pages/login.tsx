@@ -5,19 +5,18 @@ import {FooterWaves} from "../components/waves-footer";
 import { FirebaseError } from "firebase/app";
 
 export const Login = (): JSX.Element => {
+
     const navigate = useNavigate();
 
     const signInWithGoogle = async (): Promise<void> => {
-
         try {
             const result: UserCredential = await signInWithPopup( auth, provider );
             console.log(result);
-            // This go you directly to the home page
-            navigate("/");
+            // This go you directly to the home page after the user log in
+            navigate("/home");
         } catch (error: FirebaseError | unknown) {
             console.error(error);
         }
-    
     };
 
     return (
