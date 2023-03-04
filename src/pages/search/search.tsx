@@ -39,3 +39,34 @@ export const Search = (): JSX.Element => {
     </div>
   );
 };
+
+
+/*
+  
+  when I am in large view (xl and lg) I can't navigate to /searchbar, instead, 
+  navigate to the home page, wich is good, is what I am expect.
+
+  The problem to fix:
+  When I am in the medium view also I can't navigate to /searchbar, which is not
+  what I want.
+
+  ------------------------------------------------------------------
+  What wee need to keep working.
+
+  1. make that in the medium view appears the icons at the left side
+  2. make that in the small view appears the icons at the bottom 
+  3. make shure all works great and well stylized
+
+  ------------------------------------------------------------------
+  Improvements
+
+  1. Implement Astro 2.0 
+  2. Finish Learn Advanced React
+
+  -------------------------------------------------------------------
+  Personal Study
+  
+  1. Complete the course about Algorithms from ThePrimeagen
+  2. Read book: The introduction to Algorithms
+
+*/
