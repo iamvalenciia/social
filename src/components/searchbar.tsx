@@ -22,7 +22,7 @@ export const SearchBar = (): JSX.Element => {
   };
 
   return (
-    <div className="md:hidden sm:hidden lg:inline-block col-span-3 items-start relative border-2 border-gray-200">
+    <div className=" lg:inline-block col-span-3 items-start relative border-2 border-gray-200">
       <div className="px-4 sticky top-2">
         <form
           onSubmit={handleSearch}

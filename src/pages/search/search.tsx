@@ -1,55 +1,27 @@
-import { useState, useEffect } from "react";
 import { Navbar } from "../home/navbar";
 import { SearchBar } from "../../components/searchbar";
 import { SearchSection } from "./searchsection";
-import { useMediaQuery } from 'react-responsive'
+import { CheckScreenSize } from "../../components/islargescreen";
 import { useNavigate } from "react-router-dom";
 
 export const Search = (): JSX.Element => {
-  const [isMediumScreen, setIsMediumScreen] = useState(false);
-  const navigate = useNavigate();
+    const navigate = useNavigate();
+    const isLargeScreen = CheckScreenSize();
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMediumScreen(window.innerWidth <= 1024);
-    };
-    // Check for medium screen size on mount and resize
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    // Clean up event listener on unmount
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (navigate && isMediumScreen) {
-      navigate("/searchbar");
-    } else if (navigate && !isMediumScreen) {
-      navigate("/");
+    if (isLargeScreen) {
+        navigate("/home");
     }
-  }, [isMediumScreen, navigate]);
 
-  return (
-    <div className="grid h-screen lg:grid-cols-12 md:grid-cols-6 xl:mx-32 lg:mx-24">
-      <Navbar />
-      <SearchSection />
-      {/* Render SearchBar only on medium screens */}
-      {isMediumScreen && <SearchBar />}
-    </div>
-  );
+    return (
+        <div className="grid h-screen lg:grid-cols-12 md:grid-cols-6 xl:mx-32 lg:mx-24">
+            <Navbar />
+            <SearchSection />
+            {isLargeScreen ? <SearchBar /> : null}
+        </div>
+    );
 };
 
-
 /*
-  
-  when I am in large view (xl and lg) I can't navigate to /searchbar, instead, 
-  navigate to the home page, wich is good, is what I am expect.
-
-  The problem to fix:
-  When I am in the medium view also I can't navigate to /searchbar, which is not
-  what I want.
-
   ------------------------------------------------------------------
   What wee need to keep working.
 
@@ -62,11 +34,12 @@ export const Search = (): JSX.Element => {
 
   1. Implement Astro 2.0 
   2. Finish Learn Advanced React
+  3. Don't use typescript interfaces
 
   -------------------------------------------------------------------
   Personal Study
   
   1. Complete the course about Algorithms from ThePrimeagen
   2. Read book: The introduction to Algorithms
-
+  
 */
