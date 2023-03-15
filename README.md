@@ -4,8 +4,10 @@
 ## The idea
 An social media app allows users to offer services and make posts inviting others in their community to request their help. Those who offer assistance and complete tasks receive a badge on their profile as recognition for their contributions."
 
+
 ### Tecnologies
 TypeScript, React.js, Vite, Tailwind CSS, Firebase
+
 
 ### Link of the site
 <a href="https://641152f949f6d408ab5da2d2--lightlines.netlify.app/" target="_blank">LightLines</a>
