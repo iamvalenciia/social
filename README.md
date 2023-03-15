@@ -1,4 +1,4 @@
-# Social Media - <a href="https://641152f949f6d408ab5da2d2--lightlines.netlify.app/" target="_blank">LightLines</a>
+# Social Media - <a href="lightlines.netlify.app" target="_blank">LightLines</a>
 
 ![image](https://user-images.githubusercontent.com/113379725/221112689-3be9a7da-060d-40df-a839-db51e08bf063.png)
 
