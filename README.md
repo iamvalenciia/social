@@ -12,5 +12,6 @@ TypeScript, React.js, Vite, Tailwind CSS, Firebase
 
 ### Link of the site
 [LightLines](https://641152f949f6d408ab5da2d2--lightlines.netlify.app/)
+Visit my site: 
 <a href="https://641152f949f6d408ab5da2d2--lightlines.netlify.app/" target="_blank">LightLines</a>
 
