@@ -10,7 +10,7 @@ An social media app allows users to offer services and make posts inviting other
 
 TypeScript, React.js, Vite, Tailwind CSS, Firebase
 
-### `npm start`
+### Link of the site
 
-Runs the app in the development mode.\
-Add /login or open [http://localhost:3000/login](http://localhost:3000/login) to view it in the browser.
+[http://lightlines.netlify.app](https://641152f949f6d408ab5da2d2--lightlines.netlify.app/)
+
