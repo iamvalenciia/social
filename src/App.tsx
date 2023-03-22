@@ -7,7 +7,6 @@ import { Login } from "./pages/login";
 import { Profile } from "./pages/profile/profile";
 import { Search } from "./pages/search/search";
 
-
 interface User {
   displayName: string | null;
   photoURL: string | null;

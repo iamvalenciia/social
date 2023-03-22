@@ -5,20 +5,20 @@ import { CheckScreenSize } from "../../components/islargescreen";
 import { useNavigate } from "react-router-dom";
 
 export const Search = (): JSX.Element => {
-    const navigate = useNavigate();
-    const isLargeScreen = CheckScreenSize();
+  const navigate = useNavigate();
+  const isLargeScreen = CheckScreenSize();
 
-    if (isLargeScreen) {
-        navigate("/home");
-    }
+  if (isLargeScreen) {
+    navigate("/home");
+  }
 
-    return (
-        <div className="grid h-screen lg:grid-cols-12 md:grid-cols-6 xl:mx-32 lg:mx-24">
-            <Navbar />
-            <SearchSection />
-            {isLargeScreen ? <SearchBar /> : null}
-        </div>
-    );
+  return (
+    <div className="grid h-screen lg:grid-cols-12 md:grid-cols-6 xl:mx-32 lg:mx-24">
+      <Navbar />
+      <SearchSection />
+      {isLargeScreen ? <SearchBar /> : null}
+    </div>
+  );
 };
 
 /*

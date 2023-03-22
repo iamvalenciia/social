@@ -18,7 +18,6 @@ export const Navbar = (): JSX.Element => {
   const location = useLocation();
   const navigate = useNavigate();
   const user: User | null | undefined = useAuthState(auth)[0];
-  console.log(user);
   const signUserOut = async () => {
     await signOut(auth);
     navigate("/");
@@ -40,7 +39,9 @@ export const Navbar = (): JSX.Element => {
           <Link
             to="/"
             className={`flex items-center p-3 my-3 rounded-full hover:bg-gray-200 ${
-              location.pathname == "/" || location.pathname === "/home"? " font-bold text-gray-800" : ""
+              location.pathname == "/" || location.pathname === "/home"
+                ? " font-bold text-gray-800"
+                : ""
             }`}
           >
             <IconBxHomeAlt className={`h-6 w-6 fill-blue`} />
@@ -58,7 +59,9 @@ export const Navbar = (): JSX.Element => {
           <Link
             to="/searchbar"
             className={`lg:hidden flex items-center p-3 my-3 rounded-full hover:bg-gray-200 ${
-              location.pathname === "/searchbar" ? " font-bold text-gray-800" : ""
+              location.pathname === "/searchbar"
+                ? " font-bold text-gray-800"
+                : ""
             }`}
           >
             <IconBxSearch className="h-6 w-6" />
