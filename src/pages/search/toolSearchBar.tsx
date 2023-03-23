@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { IconBxSearch } from "./icons";
+import { IconBxSearch } from "../../components/icons";
 
-export const SearchBar = (): JSX.Element => {
+export const ToolSearchBar = (): JSX.Element => {
   const [query, setQuery] = useState("");
   const [isInputClicked, setIsFocused] = useState(false);
 

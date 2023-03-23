@@ -1,12 +1,12 @@
-import { Navbar } from "../home/navbar";
-import { SearchBar } from "../../components/searchbar";
+import { Navbar } from "../../components/navbar";
+import { ToolSearchBar } from "./toolSearchBar";
 import { SearchSection } from "./searchsection";
-import { CheckScreenSize } from "../../components/islargescreen";
+import { CheckLargeScreen } from "../../components/checkLargeScreen";
 import { useNavigate } from "react-router-dom";
 
 export const Search = (): JSX.Element => {
   const navigate = useNavigate();
-  const isLargeScreen = CheckScreenSize();
+  const isLargeScreen = CheckLargeScreen();
 
   if (isLargeScreen) {
     navigate("/home");
@@ -16,7 +16,7 @@ export const Search = (): JSX.Element => {
     <div className="grid h-screen lg:grid-cols-12 md:grid-cols-6 xl:mx-32 lg:mx-24">
       <Navbar />
       <SearchSection />
-      {isLargeScreen ? <SearchBar /> : null}
+      {isLargeScreen ? <ToolSearchBar /> : null}
     </div>
   );
 };

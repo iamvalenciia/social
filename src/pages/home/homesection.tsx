@@ -1,4 +1,4 @@
-import { Navbar } from "./navbar";
+import { Navbar } from "../../components/navbar";
 
 export const Posts = (): JSX.Element => {
   return (

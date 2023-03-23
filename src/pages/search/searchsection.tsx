@@ -1,4 +1,4 @@
-import { SearchBar } from "../../components/searchbar";
+import { SearchBar } from "./toolSearchBar";
 
 
 export const SearchSection = (): JSX.Element => {

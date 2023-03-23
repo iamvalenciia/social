@@ -1,10 +1,10 @@
 import { auth, provider } from "../config/firebase";
 import { signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import { FooterWaves } from "../components/waves-footer";
+import { FooterWaves } from "./footerwaves";
 import { FirebaseError } from "firebase/app";
 
-export const Login = (): JSX.Element => {
+export const LoginOrRegister = (): JSX.Element => {
   const navigate = useNavigate();
 
   const signInWithGoogle = async (): Promise<void> => {

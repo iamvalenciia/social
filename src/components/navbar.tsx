@@ -1,12 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
-import { auth } from "../../config/firebase";
+import { auth } from "../config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import { IconBxHomeAlt } from "../../components/icons";
-import { IconUser } from "../../components/icons";
-import { IconLogOut } from "../../components/icons";
-import { IconBxSearch } from "../../components/icons";
+import { IconBxHomeAlt } from "./icons";
+import { IconUser } from "./icons";
+import { IconLogOut } from "./icons";
+import { IconBxSearch } from "./icons";
 
 interface User {
   displayName: string | null;
